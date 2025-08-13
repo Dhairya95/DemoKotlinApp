@@ -27,9 +27,9 @@ import java.net.URL
 class MainActivity : ComponentActivity() {
 
     // Change these values for your repo
-    private val currentVersion = "1.0.0"
+    private val currentVersion = "1.0.2"
     private val githubApiUrl = "https://api.github.com/repos/Dhairya95/DemoKotlinApp/releases/latest"
-    private val apkDownloadUrl = "https://github.com/Dhairya95/DemoKotlinApp/releases/latest/download/app-release.apk"
+    private val apkDownloadUrl = "https://github.com/Dhairya95/DemoKotlinApp/releases/latest/download/app-debug.apk"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,6 +97,7 @@ fun UpdateUI(currentVersion: String, onCheckUpdate: () -> Unit) {
         Button(onClick = { onCheckUpdate() }) {
             Text("Check for Update")
         }
+        Text(text = "Congrats. You updated to 1.0.2", style = MaterialTheme.typography.titleMedium)
     }
 }
 
